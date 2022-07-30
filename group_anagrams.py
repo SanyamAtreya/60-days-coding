@@ -11,3 +11,39 @@ class Solution:
         for i in dic.keys():
             ans.append(dic[i])
         return ans
+
+
+
+
+# -------------------------------------------------------------------
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        ans = []
+        final = []
+        
+        for i in strs:
+            ans.append(''.join(sorted(i)))
+            
+        h = {}
+        n = len(ans)
+        
+        for i in range(n):
+            if ans[i] not in h:
+                h[ans[i]] = [i]
+            else:
+                h[ans[i]] += [i]
+            
+        idx = []
+        
+        for i in h:
+            idx.append(h[i])
+        
+        res = []
+        
+        for i in idx:
+            temp = []
+            for j in i:
+                temp.append(strs[j])
+            res.append(temp)
+        
+        return res
