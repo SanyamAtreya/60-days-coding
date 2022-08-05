@@ -8,4 +8,4 @@ class Solution(object):
                 while (i+l) in s:
                     l+=1
                 long = max(l,long)
-        return long 
+        return long
