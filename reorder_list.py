@@ -1,4 +1,6 @@
-# find middle
+class Solution:
+    def reorderList(self, head: ListNode) -> None:
+        # find middle
         slow, fast = head, head.next
         while fast and fast.next:
             slow = slow.next
@@ -20,3 +22,29 @@
             first.next = second
             second.next = tmp1
             first, second = tmp1, tmp2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
